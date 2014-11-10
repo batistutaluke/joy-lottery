@@ -48,7 +48,7 @@ public class LoadBaseDataListener implements ServletContextListener {
 			lottery.setId(i);
 			lottery.setName(lotteryNames.get(i));
 			lottery.setNumbers(lotteryNumbers.get(i));
-			lottery.setRule(lotteryRules.get(i));
+			lottery.setRule(true);
 			lottery.setDesc(lotteryDescs.get(i));
 			String imagePath = StringUtil.getFormatPath(BaseData
 					.getBaseDataPath())
@@ -56,7 +56,7 @@ public class LoadBaseDataListener implements ServletContextListener {
 					+ File.separator
 					+ lotteryImages.get(i);
 			Image image = new Image(i, lotteryImages.get(i), imagePath);
-			lottery.setImage(image);
+			lottery.setImage("");
 			lotteries.add(lottery);
 		}
 

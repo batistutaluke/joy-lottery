@@ -12,12 +12,12 @@ public class Lottery {
 	private String name;
 	private int id;
 	private ArrayList<String> winningList;
-	private Image image;
-	private Music music;
+	private String image;
+	private boolean isMusic;
 	/**
-	 * 0.一次抽完, 1.一次抽一个
+	 * true:一次抽完, false:一次抽一个
 	 */
-	private int rule;
+	private boolean rule;
 	private String desc;
 	private int numbers;
 
@@ -35,14 +35,6 @@ public class Lottery {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
-	}
-
-	public int getRule() {
-		return rule;
-	}
-
-	public void setRule(int rule) {
-		this.rule = rule;
 	}
 
 	public String getName() {
@@ -69,20 +61,28 @@ public class Lottery {
 		this.winningList = winningList;
 	}
 
-	public Image getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(Image image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 
-	public Music getMusic() {
-		return music;
+	public boolean isMusic() {
+		return isMusic;
 	}
 
-	public void setMusic(Music music) {
-		this.music = music;
+	public void setMusic(boolean isMusic) {
+		this.isMusic = isMusic;
+	}
+
+	public boolean isRule() {
+		return rule;
+	}
+
+	public void setRule(boolean rule) {
+		this.rule = rule;
 	}
 
 }
