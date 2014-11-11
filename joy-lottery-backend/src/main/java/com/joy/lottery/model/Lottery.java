@@ -18,16 +18,16 @@ public class Lottery {
 	/**
 	 * true:一次抽完, false:一次抽一个
 	 */
-	private boolean rule;
+	private boolean complete_once;
 	private String desc;
-	private int numbers;
+	private int capacity;
 
-	public int getNumbers() {
-		return numbers;
+	public int getCapacity() {
+		return capacity;
 	}
 
-	public void setNumbers(int numbers) {
-		this.numbers = numbers;
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
 	}
 
 	public String getDesc() {
@@ -78,17 +78,19 @@ public class Lottery {
 		this.isMusic = isMusic;
 	}
 
-	public boolean isRule() {
-		return rule;
+	/**
+	 * @return the complete_once
+	 */
+	public boolean isComplete_once() {
+		return complete_once;
 	}
 
 	/**
-	 * @param rule the rule to set
+	 * @param complete_once
+	 *            the complete_once to set
 	 */
-	public void setRule(boolean rule) {
-		this.rule = rule;
+	public void setComplete_once(boolean complete_once) {
+		this.complete_once = complete_once;
 	}
-	
-	
 
 }

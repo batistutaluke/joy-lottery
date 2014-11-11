@@ -1,6 +1,10 @@
-package com.joy.lottery.model;
+package com.joy.lottery.test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
+import com.joy.lottery.model.Lottery;
 
 public class JSONTest {
 
@@ -13,8 +17,8 @@ public class JSONTest {
 		lottery1.setName("二等奖");
 		lottery1.setImage("image1");
 		lottery1.setMusic(true);
-		lottery1.setNumbers(10);
-		lottery1.setRule(true);
+		lottery1.setCapacity(10);
+		lottery1.setComplete_once(true);
 		lottery1.setDesc("hahahha");
 
 		Lottery lottery2 = new Lottery();
@@ -22,11 +26,16 @@ public class JSONTest {
 		lottery2.setName("一等奖");
 		lottery2.setImage("image2");
 		lottery2.setMusic(true);
-		lottery2.setNumbers(2);
-		lottery2.setRule(false);
+		lottery2.setCapacity(2);
+		lottery2.setComplete_once(false);
 		lottery2.setDesc("yayayyayayay");
 
+		List<Lottery> list = new ArrayList<Lottery>();
+		list.add(lottery1);
+		list.add(lottery2);
+
 		System.out.println(JSONObject.toJSONString(lottery1));
+		System.out.println(JSONObject.toJSONString(list));
 	}
 
 }
