@@ -1,6 +1,5 @@
 package com.joy.lottery.model;
 
-import java.util.ArrayList;
 
 /**
  * 
@@ -11,9 +10,8 @@ public class Lottery {
 
 	private String name;
 	private int id;
-	private ArrayList<String> winningList;
-
 	private String image;
+	private String titleImage;
 	private boolean isMusic;
 	/**
 	 * true:一次抽完, false:一次抽一个
@@ -24,6 +22,14 @@ public class Lottery {
 
 	public int getCapacity() {
 		return capacity;
+	}
+
+	public String getTitleImage() {
+		return titleImage;
+	}
+
+	public void setTitleImage(String titleImage) {
+		this.titleImage = titleImage;
 	}
 
 	public void setCapacity(int capacity) {
@@ -52,14 +58,6 @@ public class Lottery {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public ArrayList<String> getWinningList() {
-		return winningList;
-	}
-
-	public void setWinningList(ArrayList<String> winningList) {
-		this.winningList = winningList;
 	}
 
 	public String getImage() {
