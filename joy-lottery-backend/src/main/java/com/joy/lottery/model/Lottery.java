@@ -13,7 +13,7 @@ public class Lottery {
 	private int id;
 	private ArrayList<String> winningList;
 	private Image image;
-	private Music music;
+	private boolean haveMusic;
 	/**
 	 * 0.一次抽完, 1.一次抽一个
 	 */
@@ -77,12 +77,19 @@ public class Lottery {
 		this.image = image;
 	}
 
-	public Music getMusic() {
-		return music;
+	/**
+	 * @return the haveMusic
+	 */
+	public boolean isHaveMusic() {
+		return haveMusic;
 	}
 
-	public void setMusic(Music music) {
-		this.music = music;
+	/**
+	 * @param haveMusic the haveMusic to set
+	 */
+	public void setHaveMusic(boolean haveMusic) {
+		this.haveMusic = haveMusic;
 	}
+
 
 }
